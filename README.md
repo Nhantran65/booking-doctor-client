@@ -43,7 +43,7 @@ Before you start, make sure you have a fresh version of [Node.js](https://nodejs
 1. Fork this repository and clone your own fork to your computer:
 
     ```sh
-    git clone https://github.com/1Byte-Software/vdt-community-fe.git
+    git clone https://github.com/Nhantran65/booking-doctor-client
     ```
 
 2. From the project's root directory, install the required packages (dependencies):
