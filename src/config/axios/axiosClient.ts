@@ -55,4 +55,6 @@ const axiosInstance = (baseURL: string) => {
 const axiosInstanceJfw = axiosInstance(import.meta.env.VITE_JFW_API);
 const axiosInstanceVardytest = axiosInstance(import.meta.env.VITE_VARDYTEST_API);
 
-export { axiosInstanceJfw, axiosInstanceVardytest };
+const axiosInstanceBookingDoctor = axiosInstance(import.meta.env.VITE_BOOKING_DOCTOR_API)
+
+export { axiosInstanceJfw, axiosInstanceVardytest, axiosInstanceBookingDoctor };

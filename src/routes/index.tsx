@@ -25,6 +25,10 @@ const Router = () => {
                     path: PATH_AUTH.SIGN_IN,
                     element: <SignIn />,
                 },
+                {
+                    path: PATH_AUTH.SIGN_UP,
+                    element: <SignUp />,
+                },
             ],
         },
         // Main
@@ -71,12 +75,13 @@ const AuthLayout = Loadable(lazy(() => import("@/layouts/Auth")));
 const MainLayout = Loadable(lazy(() => import("@/layouts/Main")));
 // Auth
 const SignIn = Loadable(lazy(() => import("@/pages/auth/SignIn")));
+const SignUp = Loadable(lazy(() => import("@/pages/auth/SignUp")));
 // Main
 const Home = Loadable(lazy(() => import("@/pages/main/Home")));
 
 const Appointment = Loadable(lazy(() => import("@/pages/main/Appointment")));
-const Clinic = Loadable(lazy(() => import("@/pages/main/Clinic")));
 const Blog = Loadable(lazy(() => import("@/pages/main/Blog")));
+const Clinic = Loadable(lazy(() => import("@/pages/main/Clinic")));
 const Doctor = Loadable(lazy(() => import("@/pages/main/Doctor")));
 // Other
 const NotFound = Loadable(lazy(() => import("@/pages/NotFound")));

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
-export const SignInWrapper = styled.div``;
+
+export const SignUpWrapper = styled.div``;
 
 export const InputField = styled.input`
   margin: 10px 0;
@@ -21,6 +22,10 @@ export const SubmitButton = styled.button`
   cursor: pointer;
 `;
 
+export const SubWrapper = styled.div`
+  display: flex;
+`
+
 export const NavSignUp = styled.p`
   margin: 20px 0;
 `
@@ -29,3 +34,7 @@ export const Link = styled.a`
   color: blue;
 
 `
+export const ErrorMsg = styled.p`
+  color: red;
+  margin-top: 5px;
+`;

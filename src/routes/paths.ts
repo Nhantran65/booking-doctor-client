@@ -10,6 +10,7 @@ const ROOT_AUTH = "/account";
 export const PATH_AUTH = {
     SELF: ROOT_AUTH,
     SIGN_IN: path(ROOT_AUTH, "/sign-in"),
+    SIGN_UP: path(ROOT_AUTH, "/sign-up"),
 };
 export const PATH_MAIN = {
     HOME: "/",
