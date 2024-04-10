@@ -4,7 +4,7 @@ import { purple } from "@ant-design/colors";
 import LOGO from "@/assets/images/logo.png";
 
 export const HeaderWrapper = styled.div`
-  background-color: ${purple};
+  background-color: violet;
   width: 100%;
   height: 110px;
   display: flex;
@@ -31,6 +31,7 @@ export const Logo = styled.div`
   height: 49px;
   background-size: contain; 
   background-repeat: no-repeat; 
+  Border-radius: 10px;
 `;
 
 export const NavArea = styled.div`
@@ -39,7 +40,7 @@ export const NavArea = styled.div`
 
 export const NavButton = styled.span`
   font-family: Inter, sans-serif; 
-  font-weight: 800; 
+  font-weight: 600; 
   margin-left: 20px;
   cursor: pointer;
 `;
@@ -50,6 +51,6 @@ export const NavLink = styled.a`
   transition: color 0.3s;
   
   &:hover {
-    color: #333; /* Màu khi hover */
+    color: #fff; /* Màu khi hover */
   }
 `;
