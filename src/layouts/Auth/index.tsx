@@ -10,7 +10,7 @@ const AuthLayout = () => {
                 <Logo />
                 <Outlet />
             </AuthLayoutContent>
-            <Version>Version {VERSION} </Version>
+            <Version>Nhan Tran {VERSION} </Version>
         </AuthLayoutWrapper>
     );
 };

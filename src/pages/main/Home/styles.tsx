@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import BOOSTPTELOGO from "@/assets/images/boostpte-logo 1.png";
 import MAINLOGO from "@/assets/images/main-logo-pteonlinetests 1.png";
 
-export const AllBrandsWrapper = styled.div`
+export const HomeWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;

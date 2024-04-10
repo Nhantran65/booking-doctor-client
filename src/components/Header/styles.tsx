@@ -1,10 +1,10 @@
 // styles.js
 import styled from "@emotion/styled";
-import { blue } from "@ant-design/colors";
+import { purple } from "@ant-design/colors";
 import LOGO from "@/assets/images/logo.png";
 
 export const HeaderWrapper = styled.div`
-  background-color: ${blue[0]};
+  background-color: ${purple};
   width: 100%;
   height: 110px;
   display: flex;
@@ -17,8 +17,9 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 1440px;
-  margin: 0 240px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,16 +35,21 @@ export const Logo = styled.div`
 
 export const NavArea = styled.div`
   display: flex;
-
 `;
 
 export const NavButton = styled.span`
   font-family: Inter, sans-serif; 
-  font-weight: 400; 
-  justify-content: center;
-  align-items: center;
-  height: 19px;
-  width: 77px;
-  display: flex;
+  font-weight: 800; 
+  margin-left: 20px;
   cursor: pointer;
+`;
+
+export const NavLink = styled.a`
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+  
+  &:hover {
+    color: #333; /* Màu khi hover */
+  }
 `;

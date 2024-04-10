@@ -14,6 +14,10 @@ export const PATH_AUTH = {
 export const PATH_MAIN = {
     HOME: "/",
     TOP_USERS: "/top-users",
+    APPOINTMENT: "/appointment",
+    CLINIC: "/clinic",
+    BLOG: "/blog",
+    DOCTOR: "/doctor"
 };
 export const PATH_OTHER = {
     NOT_FOUND: "/404",

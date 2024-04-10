@@ -1,19 +1,41 @@
-import { HeaderWrapper, Logo, Container,NavArea, NavButton  } from "./styles";
+// Header.js
+import { HeaderWrapper, Logo, Container, NavArea, NavButton, NavLink } from "./styles";
 
 const Header = () => {
-    return <HeaderWrapper>
+    return (
+        <HeaderWrapper>
             <Container>
                 <Logo></Logo>
                 <NavArea>
                     <NavButton>
-                        All Brands
+                        <NavLink href="/">
+                            Home
+                        </NavLink>
                     </NavButton>
                     <NavButton>
-                        Top Users
+                        <NavLink href="/appointment">
+                            Appointment
+                        </NavLink>
+                    </NavButton>
+                    <NavButton>
+                        <NavLink href="/blog">
+                            Blogs
+                        </NavLink>
+                    </NavButton>
+                    <NavButton>
+                        <NavLink href="/clinic">
+                            Clinic
+                        </NavLink>
+                    </NavButton>
+                    <NavButton>
+                        <NavLink href="/doctor">
+                            Doctor
+                        </NavLink>
                     </NavButton>
                 </NavArea>
             </Container>
-        </HeaderWrapper>;
+        </HeaderWrapper>
+    );
 };
 
 export default Header;

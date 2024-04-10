@@ -13,7 +13,7 @@ const Loadable = (Component: any) => (props: any) => {
 };
 
 const Router = () => {
-    const isLogin = true;
+    const isLogin = false;
 
     return useRoutes([
         // Auth
@@ -30,15 +30,27 @@ const Router = () => {
         // Main
         {
             path: PATH_MAIN.HOME,
-            element: isLogin ? <MainLayout /> : <Navigate to={PATH_AUTH.SIGN_IN} replace />,
+            element:  <MainLayout /> ,
             children: [
                 {
                     path: PATH_MAIN.HOME,
-                    element: <AllBrands />,
+                    element: <Home />,
                 },
                 {
-                    path: PATH_MAIN.TOP_USERS,
-                    element: <TopUsers />,
+                    path: PATH_MAIN.APPOINTMENT,
+                    element: <Appointment />,
+                },
+                {
+                    path: PATH_MAIN.CLINIC,
+                    element: <Clinic />,
+                },
+                {
+                    path: PATH_MAIN.BLOG,
+                    element: <Blog />,
+                },
+                {
+                    path: PATH_MAIN.DOCTOR,
+                    element: <Doctor />,
                 },
             ],
         },
@@ -60,8 +72,12 @@ const MainLayout = Loadable(lazy(() => import("@/layouts/Main")));
 // Auth
 const SignIn = Loadable(lazy(() => import("@/pages/auth/SignIn")));
 // Main
-const AllBrands = Loadable(lazy(() => import("@/pages/main/AllBrands")));
-const TopUsers = Loadable(lazy(() => import("@/pages/main/TopUsers")));
+const Home = Loadable(lazy(() => import("@/pages/main/Home")));
+
+const Appointment = Loadable(lazy(() => import("@/pages/main/Appointment")));
+const Clinic = Loadable(lazy(() => import("@/pages/main/Clinic")));
+const Blog = Loadable(lazy(() => import("@/pages/main/Blog")));
+const Doctor = Loadable(lazy(() => import("@/pages/main/Doctor")));
 // Other
 const NotFound = Loadable(lazy(() => import("@/pages/NotFound")));
 
