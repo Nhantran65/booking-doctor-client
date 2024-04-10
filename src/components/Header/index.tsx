@@ -32,6 +32,11 @@ const Header = () => {
                             Doctor
                         </NavLink>
                     </NavButton>
+                    <NavButton>
+                        <NavLink href="/account/sign-in">
+                            Sign In
+                        </NavLink>
+                    </NavButton>
                 </NavArea>
             </Container>
         </HeaderWrapper>

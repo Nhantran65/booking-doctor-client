@@ -1,7 +1,9 @@
 import  { useState } from 'react';
 import axios from 'axios';
 import { SignUpWrapper, InputField, SubmitButton,SubWrapper, Link, NavSignUp} from './styles'
-
+import { useNavigate } from 'react-router-dom'; // Import for navigation
+import { ToastContainer, toast } from 'react-toastify'; // Toast notifications
+import 'react-toastify/dist/ReactToastify.css'; // Toast styles
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +14,8 @@ const SignUp = () => {
     role: 'patient',
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -21,13 +25,27 @@ const SignUp = () => {
     e.preventDefault();
     try {
       const response = await axios.post(`${import.meta.env.VITE_BOOKING_DOCTOR_API}sign-up`, formData);
-      console.log(response.data); // Xử lý phản hồi từ server ở đây
+      toast.success('Sign Up Successful!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+      });
+      navigate('/', { state: { message: 'Sign Up Successful' } });
+      console.log(response.data); 
     } catch (error) {
-      console.error(error); // Xử lý lỗi ở đây
+      toast.error('Sign Up Failed! Email already exist.', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+      });
+      console.error(error); 
     }
   };
 
   return (
+    <>
     <SignUpWrapper>
       <form onSubmit={handleSubmit}>
         <SubWrapper>
@@ -46,6 +64,8 @@ const SignUp = () => {
         </NavSignUp>
       </form>
     </SignUpWrapper>
+    <ToastContainer />
+    </>
   );
 };
 

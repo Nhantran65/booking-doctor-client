@@ -1,5 +1,5 @@
 // styles.js
-
+import { blue } from "@ant-design/colors";
 import styled from "@emotion/styled";
 
 export const MainLayoutWrapper = styled.div`
@@ -8,7 +8,7 @@ export const MainLayoutWrapper = styled.div`
 `;
 
 export const FooterWrapper = styled.div`
-  background-color: #0958D9;
+background-color: ${blue[5]};
   width: 100%;
   height: 38px;
   bottom: 0;

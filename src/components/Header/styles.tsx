@@ -1,19 +1,19 @@
 // styles.js
 import styled from "@emotion/styled";
-import { purple } from "@ant-design/colors";
+import { blue } from "@ant-design/colors";
 import LOGO from "@/assets/images/logo.png";
 
 export const HeaderWrapper = styled.div`
-  background-color: violet;
+  background-color: ${blue[3]};
   width: 100%;
-  height: 110px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 999; /* Đảm bảo Header luôn hiển thị trên cùng */
+  z-index: 999; 
 `;
 
 export const Container = styled.div`
@@ -41,6 +41,7 @@ export const NavArea = styled.div`
 export const NavButton = styled.span`
   font-family: Inter, sans-serif; 
   font-weight: 600; 
+  font-size: 16px;
   margin-left: 20px;
   cursor: pointer;
 `;
