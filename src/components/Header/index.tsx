@@ -1,4 +1,3 @@
-// Header.js
 import { HeaderWrapper, Logo, Container, NavArea, NavButton, NavLink } from "./styles";
 
 const Header = () => {

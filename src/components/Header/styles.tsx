@@ -1,19 +1,17 @@
-// styles.js
 import styled from "@emotion/styled";
 import { blue } from "@ant-design/colors";
 import LOGO from "@/assets/images/logo.png";
 
 export const HeaderWrapper = styled.div`
-  background-color: ${blue[3]};
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 999; 
+position: fixed; /* Header sẽ được cố định ở đầu trang */
+top: 0; /* Đảm bảo Header nằm ở đỉnh trang */
+width: 100%;
+background-color: ${blue[3]};
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000; /* Đảm bảo Header cao hơn các phần tử khác */
 `;
 
 export const Container = styled.div`
