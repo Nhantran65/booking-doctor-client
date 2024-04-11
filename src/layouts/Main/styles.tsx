@@ -4,10 +4,12 @@ import styled from "@emotion/styled";
 
 export const MainLayoutWrapper = styled.div``;
 export const MainLayoutContainer = styled(Container)`
+
     display: flex;
     justify-content: space-between;
-    padding: 120px 15px;
-    min-height: 604px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    min-height: 830px;
 `;
 export const Left = styled.aside`
     width: 270px;
@@ -21,5 +23,6 @@ export const Right = styled.main<{ isShowSidebar?: boolean }>`
     ${({ isShowSidebar }) => (isShowSidebar ? `width: calc(100% - 300px);` : `width: 100%;`)}
 `;
 export const Content = styled.div`
-    margin-top: 20px;
+    height: 100%;
+    width:100%;
 `;

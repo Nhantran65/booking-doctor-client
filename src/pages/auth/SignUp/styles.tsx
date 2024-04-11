@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
-
+import BACKGROUND from "@/assets/images/Background_Image.png";
 
 export const SignUpWrapper = styled.div``;
 
 export const InputField = styled.input`
+  background-image: url(${BACKGROUND}); 
   margin: 10px 0;
   width: 100%; 
   margin-bottom: 16px;

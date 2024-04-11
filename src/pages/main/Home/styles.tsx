@@ -2,15 +2,16 @@ import styled from "@emotion/styled";
 import BOOSTPTELOGO from "@/assets/images/boostpte-logo 1.png";
 import MAINLOGO from "@/assets/images/main-logo-pteonlinetests 1.png";
 
+import BACKGROUND from "@/assets/images/Background_Image.png";
 export const HomeWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 140px;
-  left: 0;
-`;
+top:100ps;
+  max-width: 1440px;
+  background-image: url(${BACKGROUND});
+  width:100%;
+  min-height:698px;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+`;  
 
 export const Container = styled.div`
   width: 1440px;
@@ -61,8 +62,8 @@ export const SubWrapper = styled.div`
     margin-bottom: 20px;
 `;
 
-export const VisitButton = styled.button`
-  background-color: #0958D9; 
+export const Button = styled.button`
+  background-color: yellow; 
   color: white; 
   width: 58px;
   height: 30px;
