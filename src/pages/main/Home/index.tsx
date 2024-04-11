@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { HomeWrapper, ButtonLink, SubWrapper1, SubWrapper2 } from "./styles";
+import { HomeWrapper, ButtonLink, SubWrapper1, SubWrapper2,LinkToPage,Slogan } from "./styles";
 
 const Home = () => {
     const { t } = useTranslation(["Home"]);
@@ -8,10 +8,16 @@ const Home = () => {
     return (
         <HomeWrapper>
             <SubWrapper1>
-                <div>{t("sample")}</div>
+                <LinkToPage href="/">
+                    Home
+                </LinkToPage>
+                <Slogan>
+                        Make a Doctor's appointment faster with Booking Care
+                    </Slogan>
                 <ButtonLink>
+                   
                     <Link to={"http://localhost:5173/appointment"}>
-                        {t("bookAppointment")}
+                        {t("Book An Appointment")}
                     </Link>
                 </ButtonLink>
             </SubWrapper1>
