@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <FooterWrapper>
             <Container>
-                Copyright © 2021-2024. All rights reserved.
+                Copyright © 2024. All rights reserved by MSc.Nhan Tran.
             </Container>
         </FooterWrapper>
     );

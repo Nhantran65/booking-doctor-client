@@ -15,7 +15,6 @@ const Home = () => {
                         Make a Doctor's appointment faster with Booking Care
                     </Slogan>
                 <ButtonLink>
-                   
                     <Link to={"http://localhost:5173/appointment"}>
                         {t("Book An Appointment")}
                     </Link>
