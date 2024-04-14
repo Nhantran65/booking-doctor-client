@@ -4,7 +4,7 @@ import { SignUpWrapper, InputField, SubmitButton, SubWrapper, Link, NavSignUp, E
 import { useNavigate } from 'react-router-dom'; // Import for navigation
 import { ToastContainer, toast } from 'react-toastify'; // Toast notifications
 import 'react-toastify/dist/ReactToastify.css'; // Toast styles
-
+import { signInAPI } from "@/api/auth"
 const SignUp = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -34,6 +34,7 @@ const SignUp = () => {
       return; // Stop submission if password is not valid
     }
     try {
+      signInAPI
       const response = await axios.post(`${import.meta.env.VITE_BOOKING_DOCTOR_API}sign-up`, formData);
       toast.success('Sign Up Successful!', {
         position: 'top-right',

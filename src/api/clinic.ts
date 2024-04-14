@@ -11,3 +11,8 @@
 
 //     return response.data;
 // };
+
+export const getListClinicAPI = async () => {
+    const response = await fetch('http://localhost:8082/clinic/all');
+    return response.json();
+};

@@ -9,7 +9,7 @@ export const TODAY_FORMATTED = dayjs(new Date()).format(DATE_TIME_FORMAT['YYYY-M
 export const INVALID_DATE = 'Invalid Date';
 
 // Cookie Keys
-export const TOKEN = 'token';
+export const TOKEN = 'jwtToken';
 export const AUTH_KEY = 'authKey';
 export const USERNAME = 'username';
 
